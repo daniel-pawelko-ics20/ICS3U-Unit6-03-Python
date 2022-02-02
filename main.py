@@ -7,15 +7,9 @@
 from random import randint
 
 
-def main():
-    # main function for min number
-
-    # create array with 10 random numbers/process
-    arr = [randint(1, 100) for rand in range(10)]
-
-    # define smallest variable
+def find_smallest(arr):
+    # define smallest number
     smallest = 101
-    arr = [randint(1, 100) for rand in range(10)]
 
     # get smallest/process
     for num in arr:
@@ -23,8 +17,18 @@ def main():
         if num < smallest:
             smallest = num
 
-    # output
-    print(f"\nSmallest number is {smallest}")
+    # return smallest
+    return smallest
+
+
+def main():
+    # main function for min number
+
+    # create array with 10 random numbers/process
+    arr = [randint(1, 100) for rand in range(10)]
+
+    # output/calling function
+    print(f"\nSmallest number is {find_smallest(arr)}")
 
     # done
     print("")
